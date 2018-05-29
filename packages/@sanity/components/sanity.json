@@ -640,6 +640,10 @@
       "path": "utilities/StackedEscapable.js"
     },
     {
+      "name": "part:@sanity/components/utilities/escapable",
+      "description": "Listens to escape button pressed"
+    },
+    {
       "implements": "part:@sanity/components/utilities/escapable",
       "path": "utilities/Escapable.js"
     },
@@ -803,7 +807,6 @@
       "implements": "part:@sanity/components/utilities/activate-on-focus",
       "path": "utilities/ActivateOnFocus.js"
     },
-
     {
       "name": "part:@sanity/components/panes/default",
       "description": "Default Pane"
@@ -840,6 +843,34 @@
       "implements": "part:@sanity/components/utilities/scroll-container",
       "path": "utilities/ScrollContainer.js"
     },
+    {
+      "name": "part:@sanity/components/utilities/capture-outside-clicks",
+      "description": "Catch click outside this components. Used for dialogs/popups/menus etc"
+    },
+    {
+      "implements": "part:@sanity/components/utilities/capture-outside-clicks",
+      "path": "utilities/CaptureOutsideClicks.js"
+    },
+
+    {
+      "name": "part:@sanity/components/utilities/portal",
+      "description": "React portal"
+    },
+    {
+      "implements": "part:@sanity/components/utilities/portal",
+      "path": "utilities/Portal/index.js"
+    },
+
+    {
+      "name": "part:@sanity/components/utilities/stacked",
+      "description": "Stacking. Used for overlays/portals and things that closes with esc or clickOutside"
+    },
+    {
+      "implements": "part:@sanity/components/utilities/stacked",
+      "path": "utilities/Stacked.js"
+    },
+
+
     {
       "implements": "part:@sanity/base/component",
       "path": "buttons/story.js"

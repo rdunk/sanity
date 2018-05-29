@@ -6,10 +6,10 @@ import styles from 'part:@sanity/components/dialogs/default-style'
 import Button from 'part:@sanity/components/buttons/default'
 import ButtonCollection from 'part:@sanity/components/buttons/button-collection'
 import {partition} from 'lodash'
-import {Portal} from '../utilities/Portal'
-import Escapable from '../utilities/Escapable'
-import CaptureOutsideClicks from '../utilities/CaptureOutsideClicks'
-import Stacked from '../utilities/Stacked'
+import {Portal} from 'part:@sanity/components/utilities/portal'
+import Escapable from 'part:@sanity/components/utilities/escapable'
+import CaptureOutsideClicks from 'part:@sanity/components/utilities/capture-outside-clicks'
+import Stacked from 'part:@sanity/components/utilities/stacked'
 
 export default class DefaultDialog extends React.Component {
   static propTypes = {

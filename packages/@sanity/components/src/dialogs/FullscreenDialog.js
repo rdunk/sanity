@@ -6,8 +6,8 @@ import CloseIcon from 'part:@sanity/base/close-icon'
 import Button from 'part:@sanity/components/buttons/default'
 import ButtonCollection from 'part:@sanity/components/buttons/button-collection'
 import {partition} from 'lodash'
-import {Portal} from '../utilities/Portal'
-import StackedEscapable from '../utilities/StackedEscapable'
+import {Portal} from 'part:@sanity/components/utilities/portal'
+import StackedEscapable from 'part:@sanity/components/utilities/stacked-escapable'
 
 export default class FullScreenDialog extends React.PureComponent {
   static propTypes = {

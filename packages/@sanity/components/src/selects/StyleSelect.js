@@ -5,12 +5,12 @@ import styles from 'part:@sanity/components/selects/style-style'
 import FaAngleDown from 'part:@sanity/base/angle-down-icon'
 import CircleThinIcon from 'part:@sanity/base/circle-thin-icon'
 import CircleCheckIcon from 'part:@sanity/base/circle-check-icon'
-import Stacked from '../utilities/Stacked'
-import Escapable from '../utilities/Escapable'
-import CaptureOutsideClicks from '../utilities/CaptureOutsideClicks'
+import Stacked from 'part:@sanity/components/utilities/stacked'
+import CaptureOutsideClicks from 'part:@sanity/components/utilities/capture-outside-clicks'
+import Escapable from 'part:@sanity/components/utilities/escapable'
+import {Portal} from 'part:@sanity/components/utilities/portal'
 import {List, Item} from 'part:@sanity/components/lists/default'
 import {Manager, Target, Popper} from 'react-popper'
-import {Portal} from '../utilities/Portal'
 
 class StyleSelect extends React.PureComponent {
   static propTypes = {

@@ -7,9 +7,9 @@ import ArrowIcon from 'part:@sanity/base/angle-down-icon'
 import Menu from 'part:@sanity/components/menus/default'
 import {omit} from 'lodash'
 import {Manager, Target, Popper} from 'react-popper'
-import {Portal} from '../utilities/Portal'
-import Stacked from '../utilities/Stacked'
-import Escapable from '../utilities/Escapable'
+import Stacked from 'part:@sanity/components/utilities/stacked'
+import Escapable from 'part:@sanity/components/utilities/escapable'
+import {Portal} from 'part:@sanity/components/utilities/portal'
 
 export default class DropDownButton extends React.PureComponent {
   static propTypes = {

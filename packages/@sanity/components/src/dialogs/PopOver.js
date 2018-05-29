@@ -6,10 +6,10 @@ import ButtonCollection from 'part:@sanity/components/buttons/button-collection'
 import CloseIcon from 'part:@sanity/base/close-icon'
 import {Manager, Target, Popper, Arrow} from 'react-popper'
 import {partition} from 'lodash'
-import {Portal} from '../utilities/Portal'
-import Stacked from '../utilities/Stacked'
-import CaptureOutsideClicks from '../utilities/CaptureOutsideClicks'
-import Escapable from '../utilities/Escapable'
+import {Portal} from 'part:@sanity/components/utilities/portal'
+import Stacked from 'part:@sanity/components/utilities/stacked'
+import CaptureOutsideClicks from 'part:@sanity/components/utilities/capture-outside-clicks'
+import Escapable from 'part:@sanity/components/utilities/escapable'
 
 export default class PopOver extends React.PureComponent {
   static propTypes = {
