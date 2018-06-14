@@ -162,21 +162,21 @@ export default class WithFormBuilderValue extends React.PureComponent<Props, Sta
   }
 
   render() {
-    const {typeName, documentId, schema, children: Component} = this.props
+    const {typeName, documentId, schema, children} = this.props
     const {isLoading, isSaving, value, deletedSnapshot} = this.state
     return (
       <SanityFormBuilderContext value={value} schema={schema} patchChannel={this.patchChannel}>
-        <Component
-          value={value}
-          isLoading={isLoading}
-          isSaving={isSaving}
-          deletedSnapshot={deletedSnapshot}
-          documentId={documentId}
-          type={schema.get(typeName)}
-          onChange={this.handleChange}
-          onDelete={this.handleDelete}
-          onCreate={this.handleCreate}
-        />
+        {children({
+          value: value,
+          isLoading: isLoading,
+          isSaving: isSaving,
+          deletedSnapshot: deletedSnapshot,
+          documentId: documentId,
+          type: schema.get(typeName),
+          onChange: this.handleChange,
+          onDelete: this.handleDelete,
+          onCreate: this.handleCreate
+        })}
       </SanityFormBuilderContext>
     )
   }
