@@ -10,6 +10,7 @@ export default class FormBuilder extends React.Component {
     value: PropTypes.any,
     schema: PropTypes.object.isRequired,
     type: PropTypes.object.isRequired,
+    path: PropTypes.array,
     onChange: PropTypes.func.isRequired,
     patchChannel: PropTypes.shape({
       onPatch: PropTypes.func
@@ -27,6 +28,7 @@ export default class FormBuilder extends React.Component {
       schema,
       value,
       type,
+      path = [],
       onChange,
       resolveInputComponent,
       resolvePreviewComponent,
@@ -36,7 +38,6 @@ export default class FormBuilder extends React.Component {
     if (!schema) {
       throw new TypeError('You must provide a schema to <FormBuilder (...)')
     }
-
     return (
       <FormBuilderContext
         schema={schema}
@@ -45,7 +46,14 @@ export default class FormBuilder extends React.Component {
         resolvePreviewComponent={resolvePreviewComponent}
         patchChannel={patchChannel}
       >
-        <FormBuilderInput value={value} type={type} onChange={onChange} level={0} isRoot />
+        <FormBuilderInput
+          path={path}
+          value={value}
+          type={type}
+          onChange={onChange}
+          level={0}
+          isRoot
+        />
       </FormBuilderContext>
     )
   }
