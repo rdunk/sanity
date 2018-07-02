@@ -7,7 +7,9 @@ class ActivateOnFocus extends React.Component {
   static propTypes = {
     children: PropTypes.node.isRequired,
     message: PropTypes.string,
-    isActive: PropTypes.bool
+    html: PropTypes.node,
+    isActive: PropTypes.bool,
+    onActivate: PropTypes.func
   }
 
   static defaultProps = {
@@ -24,6 +26,10 @@ class ActivateOnFocus extends React.Component {
       this.setState({
         hasFocus: true
       })
+      const {onActivate} = this.props
+      if (onActivate) {
+        onActivate()
+      }
     }
   }
 
@@ -36,19 +42,16 @@ class ActivateOnFocus extends React.Component {
   }
 
   render() {
-    const {message, children, isActive} = this.props
+    const {message, children, isActive, html} = this.props
     const {hasFocus} = this.state
 
     return (
       <div className={hasFocus ? styles.hasFocus : styles.noFocus}>
         {!isActive && (
-          <div
-            className={styles.eventHandler}
-            onClick={this.handleClick}
-            ref={this.setEventHandlerElement}
-          >
+          <div className={styles.eventHandler} onClick={this.handleClick}>
             <div className={styles.overlay} />
-            <div className={styles.message}>{message}</div>
+            {!html && <div className={styles.stringMessage}>{message}</div>}
+            {html && <div className={styles.html}>{html}</div>}
           </div>
         )}
         <div className={styles.content}>{children}</div>
